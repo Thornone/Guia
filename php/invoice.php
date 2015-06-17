@@ -1,18 +1,38 @@
-<section class="panel panel-default pos-rlt clearfix">
+<?php
+/*
+$id = mysql_real_escape_string($_GET['id']);
 
-	<header class="panel-heading"> <i class="fa fa-list"></i> Ordenes de trabajo</header>
+if ( isset($_POST['nombre']) ){
+
+	$date 	= mysql_real_escape_string($_POST['date']);
+	$cliente 	= mysql_real_escape_string($_POST['cliente']);
+	$invoice  = mysql_real_escape_string($_POST['invoice']);
+	$model  	= mysql_real_escape_string($_POST['model']);
+
+
+
+
+}
+
+$data = mysql_fetch_object(mysql_query("SELECT * FROM clientes WHERE id='".$id."' LIMIT 1"));
+*/
+?>
+		<section class="panel panel-default">
+			<header class="panel-heading"> <i class="fa fa-list"></i> Lista de Invoice</header>
 	
 	<div class="row wrapper">
-		<div class="col-sm-2 m-b-xs">
-			<a href="admin.php?m=clientesAgregar" class="pull-left btn btn-sm btn-success"><i class="fa fa-plus"></i> Nueva Orden</a>
+		<div class="col-xs-2 col-lg-2 m-b-xs">
+			<a href="admin.php?m=invoiceAgregar" class="pull-left btn btn-sm btn-success"><i class="fa fa-plus"></i> Nuevo invoice</a>
 		</div>
-		<div class="col-sm-7 m-b-xs text-center">
-			<a href="" class="btn btn-default btn-sm">Cuentas por Cobrar</a>
-			<a href="" class="btn btn-default btn-sm">Reporte de Ingresos</a>
+		<div class="col-xs-3 col-lg-7 m-b-xs">	
 		</div>
-		<div class="col-sm-3">
+		<div class="col-xs-7 col-lg-3 m-b-xs">
 			<div class="input-group">
-				<input type="text" class="input-sm form-control" placeholder="Buscar"> <span class="input-group-btn"> <button class="btn btn-sm btn-default" type="button"> <i class="fa fa-search"></i> </button> </span>
+				<input type="text" class="input-sm form-control" placeholder="Buscar">
+				<span class="input-group-btn">
+					<button class="btn btn-sm btn-default" type="button"> <i class="fa fa-search"></i> 
+					</button> 
+				</span>
 			</div>
 		</div>
 	</div>
@@ -21,8 +41,8 @@
 		<table class="table table-striped b-t b-light">
 			<thead>
 				<tr>
-					<th>Date / Time</th>
-					<th>Nombre</th>
+					<th>Date</th>
+					<th>Cliente</th>
 					<th>Invoice</th>
 					<th width="200">Model</th>
 					<th width="120"></th>
@@ -54,5 +74,4 @@
 			</tbody>
 		</table>
 	</div>
-
-</section>
+		</section>

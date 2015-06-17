@@ -21,6 +21,12 @@ if ( isset($_GET['m']) ){
 		case "clientesEditar":
 			$paginaPHP = "php/clientesEditar.php";
 		break;
+		case "invoice":
+			$paginaPHP = "php/invoice.php";
+		break;
+		case "invoiceAgregar":
+			$paginaPHP = "php/invoiceAgregar.php";
+		break;
 
 	}
 } else {
@@ -72,14 +78,7 @@ $errorMsg = "";
 								<!-- nav -->
 								<nav class="nav-primary hidden-xs">
 									<ul class="nav">
-										<li> <a href="admin.php?m=clientes"> <i class="fa fa-angle-right"></i> <span>Clientes</span> </a> </li>
-										<li class="">
-											<a href="#webpage" class=""><i class="fa fa-angle-right icon"></i> <span class="pull-right"> <i class="fa fa-angle-down text"></i> <i class="fa fa-angle-up text-active"></i> </span> <span>Configuracion</span> </a>
-											<ul class="nav lt" style="display: none;">
-												<li> <a href="admin.php?m=blog"> <i class="fa fa-angle-right"></i> <span>Usuarios</span> </a> </li>
-												<li> <a href="admin.php?m=blog"> <i class="fa fa-angle-right"></i> <span>Clientes</span> </a> </li>
-											</ul>
-										</li>
+										<li> <a href="admin.php?m=invoice"> <i class="fa fa-angle-right"></i> <span>Invoice</span> </a> </li>
 									</ul>
 								</nav>
 								<!-- / nav -->
